@@ -12,6 +12,7 @@ fetch(endpoint)
 function findMatches(wordToMatch, cities) {
   return cities.filter(place => {
     // here we need to figure out if the city or state matches what cas searched
-    return place.city.match(/wordToMatch/i);
+    const regex = new RegExp(wordToMatch, "gi");
+    return place.city.match(regex);
   });
 }
