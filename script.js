@@ -20,3 +20,6 @@ function findMatches(wordToMatch, cities) {
 function displayMatches() {
   console.log(this.value);
 }
+
+const searchInput = document.querySelector(".search");
+const suggestions = document.querySelector(".suggestions");
