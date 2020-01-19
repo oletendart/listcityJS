@@ -13,6 +13,10 @@ function findMatches(wordToMatch, cities) {
   return cities.filter(place => {
     // here we need to figure out if the city or state matches what cas searched
     const regex = new RegExp(wordToMatch, "gi");
-    return place.city.match(regex);
+    return place.city.match(regex) || place.state.match(regex);
   });
+}
+
+function displayMatches() {
+  console.log(this.value);
 }
