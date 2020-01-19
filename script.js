@@ -7,4 +7,11 @@ const cities = [];
 
 fetch(endpoint)
   .then(blob => blob.json())
-  .then(data => cities.push(data));
+  .then(data => cities.push(...data));
+
+function findMatches(wordToMatch, cities) {
+  return cities.filter(place => {
+    // here we need to figure out if the city or state matches what cas searched
+    return place.city.match(/wordToMatch/i);
+  });
+}
